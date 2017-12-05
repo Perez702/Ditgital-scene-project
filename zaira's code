@@ -1,0 +1,52 @@
+//back ground
+penColor("lightBlue");
+dot(500);
+// call draw all sunbeams
+drawallSunbeams(100); 
+
+//call draw all birds 
+drawallBirds();
+//draw all sunbeams 
+function drawallSunbeams() {
+  turnLeft(130);
+for (var i = 0; i < 100; i++) {
+    moveTo(randomNumber(1,500),0);
+    drawSunbeams(randomNumber(1,100));
+    moveTo(randomNumber(-100,500),0);
+}
+}
+//draw sunbeams 
+function drawSunbeams(){
+  penDown();
+  penWidth(randomNumber(1,15));
+  penRGB(255,255,255,0.1);
+  moveForward(randomNumber(50,300));
+  penUp();
+}
+//draw all birds
+function drawallBirds(){
+ for (var i = 0; i < 4; i++) {
+   moveTo(161,239);
+   drawBird(); 
+   
+    
+  }
+ 
+}
+  
+// draw bird 
+//function drawBird(){
+ moveTo(randomNumber(16,288), randomNumber(11, 166));
+penColor("black");
+penWidth(10);
+penDown();
+turnRight(128);
+arcRight(90, 25);
+turnLeft(100);
+arcRight(90,23);
+penUp();
+
+//}
+function drawBird(){
+  
+}
