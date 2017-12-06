@@ -1,6 +1,5 @@
 penColor("#93b7f2");
 dot(500);
-//drawAllGrass();
 drawAllTrees();
 drawAllGrass();
 function drawAllGrass(){
