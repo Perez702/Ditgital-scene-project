@@ -1,7 +1,7 @@
 penColor("#93b7f2");
 dot(500);
-drawAllGrass();
 drawAllTrees();
+drawAllGrass();
 function drawAllGrass(){
   for (var i = 0; i < 1067; i++) {
     penUp();
@@ -14,17 +14,55 @@ function drawAllGrass(){
  function drawGrass(){
    penDown();
    penColor("green");
+   penWidth(1);
    moveForward(randomNumber(5,50));
  }
 function drawAllTrees() {
-  drawAllTrees();
-  moveTo(randomNumber(5, 320), 155);
+  for (var i = 0; i < 4; i++) {
+    moveTo(randomNumber(5, 320), 449);
+    drawTrees();
+  }
 }
-function drawAllTrees() {
+function drawTrees() {
   penColor("#772c15");
   penDown();
   penWidth(20);
-  moveForward(randomNumber(200, 100));
+  moveForward(randomNumber(150, 300));
+  penColor("green");
+  dot(65);
+  penUp();
+  
+}
+penColor("#93b7f2");
+dot(500);
+drawAllTrees();
+drawAllGrass();
+function drawAllGrass(){
+  for (var i = 0; i < 1067; i++) {
+    penUp();
+    moveTo(randomNumber(0,320),450);
+    drawGrass(randomNumber(1, 5));
+    turnTo(0);
+  }
+
+}
+ function drawGrass(){
+   penDown();
+   penColor("green");
+   penWidth(1);
+   moveForward(randomNumber(5,50));
+ }
+function drawAllTrees() {
+  for (var i = 0; i < 4; i++) {
+    moveTo(randomNumber(5, 320), 449);
+    drawTrees();
+  }
+}
+function drawTrees() {
+  penColor("#772c15");
+  penDown();
+  penWidth(20);
+  moveForward(randomNumber(150, 300));
   penColor("green");
   dot(65);
   penUp();
