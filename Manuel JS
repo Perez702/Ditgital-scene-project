@@ -1,14 +1,15 @@
 penColor("#93b7f2");
 dot(500);
 drawAllGrass();
-function drawAllTGrass() {
+drawAllTrees();
+function drawAllGrass() {
   drawAllGrass();
 }
 function drawAllGrass(){
   for (var i = 0; i < 1067; i++) {
     penUp();
     moveTo(randomNumber(0,320),450);
-    drawGrass(randomNumber(1,5));
+    drawGrass(randomNumber(1, 5));
     turnTo(0);
   }
 
@@ -18,3 +19,17 @@ function drawAllGrass(){
    penColor("green");
    moveForward(randomNumber(5,50));
  }
+function drawAllTrees() {
+  drawAllTrees();
+  moveTo(randomNumber(5, 320), 155);
+}
+function drawAllTrees() {
+  penColor("#772c15");
+  penDown();
+  penWidth(20);
+  moveForward(randomNumber(200, 100));
+  penColor("green");
+  dot(65);
+  penUp();
+  
+}
