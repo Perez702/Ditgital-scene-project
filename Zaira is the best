@@ -1,0 +1,169 @@
+//back ground
+penColor("lightBlue");
+dot(500);
+// call draw all sunbeams
+drawallSunbeams(100);
+turnRight(130);
+
+
+//call draw all trees
+ drawAllTrees(); 
+ 
+ //call draw all grass
+ drawAllGrass(); 
+ 
+ //call draw all fllowers
+ drawAllflowers();
+ 
+ //call draw all birds 
+drawallBirds();
+
+
+//draw all sunbeams: the loop
+function drawallSunbeams() {
+  turnLeft(130);
+for (var i = 0; i < 100; i++) {
+    moveTo(randomNumber(1,500),0);
+    drawSunbeams(randomNumber(1,100));
+    moveTo(randomNumber(-100,500),0);
+}
+}
+//draw sunbeams: the "definition" 
+function drawSunbeams(){
+  penDown();
+  penWidth(randomNumber(1,15));
+  penRGB(255,255,255,0.1);
+  moveForward(randomNumber(50,300));
+  penUp();
+}
+//draw all birds: the loop
+function drawallBirds(){
+ for (var i = 0; i < 10; i++) {
+   moveTo(161,239);
+   drawBird(); 
+   
+    
+  }
+ 
+}
+  
+// draw bird: the "definition"
+function drawBird(){
+moveTo(randomNumber(16,288), randomNumber(11, 166));
+penColor("black");
+penWidth(10);
+penDown();
+//turnRight(128);
+arcRight(120, 20);
+turnLeft(120);
+arcRight(120,20);
+turnLeft(120);
+penUp();
+
+}
+
+
+// draw all grass: the loop
+function drawAllGrass(){
+  for (var i = 0; i < 1067; i++) {
+    penUp();
+    moveTo(randomNumber(0,320),450);
+    drawGrass(randomNumber(1, 5));
+    turnTo(0);
+  }
+
+}
+
+// draw grass: the "definition"
+function drawGrass(){
+   penDown();
+   penColor("green");
+   penWidth(1);
+   moveForward(randomNumber(5,50));
+   penUp();
+ }
+ 
+ 
+ // draw all trees: the loop
+ function drawAllTrees() {
+  for (var i = 0; i < 4; i++) {
+    moveTo(randomNumber(5, 320), 449);
+    drawTrees();
+  }
+}
+
+//draw trees: the "definition"
+function drawTrees() {
+  penColor("#772c15");
+  penDown();
+  penWidth(20);
+  moveForward(randomNumber(250, 350));
+  penColor("green");
+  dot(65);
+  penUp();
+  
+}
+
+
+//draw all flowers: the loop 
+function drawAllflowers(){
+for (var i = 0; i < 4; i++) {
+  drawFlower();
+}
+}
+
+
+// draw flowers: the "definition"
+function drawFlower(){
+  drawStem();
+  drawHead();
+}
+
+// darw stem: definition 
+function drawStem(){
+penUp();
+moveTo(randomNumber(5,290),449);
+penDown();
+penWidth(5);
+penColor("green");
+moveForward(100);
+}
+
+// draw head of flower: the definition
+function drawHead(){
+penColor("yellow");
+dot(18);
+turnRight(90);
+moveForward(25);
+penColor("red");
+dot(15);
+turnLeft(90);
+penUp();
+moveForward(25);
+turnLeft(90);
+
+dot(15);
+moveForward();
+dot(15);
+moveForward(17);
+dot(15);
+moveForward(17);
+
+turnLeft(90);
+moveForward(17);
+dot(15);
+moveForward(17);
+dot(15);
+moveForward(17);
+turnLeft(90);
+moveForward(17);
+dot(15);
+moveForward(17);
+dot(15);
+moveForward(17);
+dot(15);
+moveForward(17);
+turnLeft(90);
+}
+
+
