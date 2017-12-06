@@ -2,9 +2,6 @@ penColor("#93b7f2");
 dot(500);
 drawAllGrass();
 drawAllTrees();
-function drawAllGrass() {
-  drawAllGrass();
-}
 function drawAllGrass(){
   for (var i = 0; i < 1067; i++) {
     penUp();
